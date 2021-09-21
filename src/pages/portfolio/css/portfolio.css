@@ -1,0 +1,150 @@
+.portfolio {
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+  height: calc(100vh - 70px);
+}
+
+.portfolioContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-gap: 2rem;
+  padding: 4rem 4rem 2rem 4rem;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: portf 1.5s linear;
+          animation: portf 1.5s linear;
+}
+
+@media (max-width: 990px) {
+  .portfolioContainer {
+    padding: 4rem 2rem;
+  }
+}
+
+@-webkit-keyframes portf {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes portf {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.portfolioCard {
+  background-color: #323840;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  padding: 0 0 100px 0;
+}
+
+.portfolioCardImg {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.portfolioCardImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.portfolioCard:hover img {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.portfolioCardDesc {
+  padding: 25px;
+}
+
+.portfolioCardDescH4 {
+  font-weight: 400;
+  color: #2A7DA2;
+  margin-bottom: 10px;
+}
+
+.portfolioCardDescP {
+  font-size: calc(3px + 2vmin);
+  color: #848C90;
+}
+
+.portfolioCardStacks {
+  padding: 0 25px;
+}
+
+.portfolioCardStacks h5 {
+  font-weight: 500;
+  color: #2A7DA2;
+  margin-bottom: 10px;
+}
+
+.portfolioCardStacksUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolioCardStacksUl li {
+  padding: 6px 4px;
+  font-size: calc(2px + 2vmin);
+}
+
+.portfolioCardLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  position: absolute;
+  bottom: 0;
+}
+
+.portfolioCardLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px;
+  color: #FFF;
+  font-size: calc(12px + 2vmin);
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolioCardLink:hover {
+  background-color: #2A7DA2;
+}
+/*# sourceMappingURL=portfolio.css.map */

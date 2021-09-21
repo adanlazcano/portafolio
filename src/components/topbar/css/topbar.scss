@@ -1,0 +1,220 @@
+@import '../../../css/vars';
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 4rem;
+    transition: 0.2s ease-in-out;
+    &Logo {
+        transform-origin: right;
+        transition: 0.5s;
+    }
+    &.sticky {
+        background-color: $bg-clr;
+        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+    }
+    &.active &Logo {
+        transform: scale(0);
+        transform-origin: left;
+    }
+    &List {
+        display: flex;
+        li {
+            margin-left: 25px;
+        }
+    }
+    &Language {
+        border: 1px solid $clr-icon-two;
+        padding: 0 15px;
+        z-index: 4;
+        border-radius: 45px;
+        font-size: calc(1px + 2vmin);
+        display: flex;
+        align-items: center;
+        user-select: none;
+        span {
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            &:nth-child(1):hover {
+                color: $clr-green;
+            }
+            &:nth-child(2):hover {
+                color: violet;
+            }
+        }
+    }
+    &Toggle {
+        position: relative;
+        width: 30px;
+        z-index: 4;
+        height: 30px;
+        background: url('../img/menu.png') no-repeat;
+        background-position: center;
+        background-size: 30px;
+        cursor: pointer;
+        transition: 0.1s;
+    }
+    &Menu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+        visibility: hidden;
+        opacity: 0;
+        transition: 1s;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 54.6%;
+            transform: translateY(-50%);
+            right: 100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            transition: 1s;
+        }
+        &ImgCont {
+            position: absolute;
+            top: 54.6%;
+            transform: translateY(-50%);
+            right: 100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background-color: $bg-clr;
+            overflow: hidden;
+            transition: 1s;
+        }
+        &Img {
+            position: absolute;
+            z-index: 1;
+            width: 550px;
+            top: 24px;
+            right: -30px;
+        }
+        &Links {
+            position: absolute;
+            z-index: 3;
+            padding: 0 10rem;
+            display: flex;
+            flex-direction: column;
+            visibility: hidden;
+            opacity: 0;
+            transform-origin: right;
+            transform: scale(0);
+            transition: 0.5s;
+            &Link {
+                padding: 15px;
+                margin: 20px 0;
+                color: $clr-light;
+                font-size: calc(14px + 2vmin);
+                transition: 0.5s ease-in-out;
+                border-radius: 6px;
+                &:hover {
+                    background-color: $clr-light;
+                    color: $bg-clr;
+                    letter-spacing: 6px;
+                }
+            }
+        }
+    }
+    &.active &Toggle {
+        background: url('../img/close.png') no-repeat;
+        background-position: center;
+        background-size: 20px;
+    }
+    &.active &Language {
+        border: 1px solid $clr-light;
+        // span {
+        //     // &:hover {
+        //     //     color: $bg-clr;
+        //     // }
+        // }
+    }
+    &.active &Menu {
+        visibility: visible;
+        opacity: 1;
+        &::before {
+            background-color: $bg-clr;
+            box-shadow: 0 0 0 1200px $clr-icon-two;
+        }
+    }
+    &.active .headerMenuLinks {
+        visibility: visible;
+        opacity: 1;
+        transform-origin: left;
+        transform: scale(1);
+    }
+    // &.active~.tab {
+    //     background-color: $clr-light;
+    //     color: $bg-clr;
+    // }
+    &.active~.home .homeDesc {
+        transform-origin: left;
+        transform: scale(0);
+    }
+    @media (max-width:990px) {
+        & {
+            padding: 30px 1.8rem;
+        }
+        &Toggle {
+            width: 25px;
+            height: 25px;
+            background-size: 25px;
+        }
+        &List {
+            li {
+                margin-left: 18px;
+            }
+        }
+        &.active &Language {
+            border: 1px solid $clr-light;
+            // span {
+            //     &:hover {
+            //         color: $clr-icon-two;
+            //     }
+            // }
+        }
+        &.active &Toggle {
+            background-size: 15px;
+        }
+        &Menu {
+            background-color: #1A1A1F;
+            align-items: center;
+            &::before {
+                opacity: 0;
+            }
+            &ImgCont {
+                opacity: 0;
+            }
+            &Img {
+                opacity: 0;
+            }
+            &Links {
+                width: 100%;
+                align-items: center;
+                height: 100vh;
+                justify-content: center;
+                &Link {
+                    color: $clr-light;
+                    padding: 10px 12px;
+                    margin: 10px 0;
+                    font-weight: 500;
+                    &:hover {
+                        color: $bg-clr;
+                    }
+                }
+            }
+        }
+    }
+}

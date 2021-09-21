@@ -1,0 +1,17 @@
+@mixin container($width) {
+    @media (max-width: $width) {
+        grid-template-columns: 1fr;
+    }
+}
+
+@mixin interestUl($width, $fr) {
+    @media (max-width: $width) {
+        grid-template-columns: $fr;
+    }
+}
+
+@mixin experienceBox($width) {
+    @media (max-width: $width) {
+        flex-direction: column;
+    }
+}

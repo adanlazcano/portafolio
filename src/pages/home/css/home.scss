@@ -1,0 +1,129 @@
+@import '../../../css/vars';
+.home {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 70px;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    &Desc {
+        width: 50%;
+        position: relative;
+        z-index: 5;
+        transform-origin: right;
+        transition: 0.5s ease-in-out;
+        left: 4rem;
+        animation: showDesc 1s linear;
+        h3 {
+            margin-bottom: 15px;
+            font-weight: 200;
+        }
+        h5 {
+            font-weight: 400;
+            line-height: 30px;
+        }
+        button {
+            padding: 8px 16px;
+            outline: none;
+            background-color: $clr-icon-two;
+            color: $clr-light;
+            font-family: inherit;
+            border: none;
+            border-radius: 10px;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-size: calc(5px + 2vmin);
+            font-weight: 500;
+            letter-spacing: 1px;
+            border: 1px solid $clr-border;
+            &:hover {
+                filter: brightness(120%);
+            }
+        }
+        @keyframes showDesc {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+    &Img {
+        width: 50%;
+        background: linear-gradient(90deg, transparent, $clr-icon-two, transparent);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        right: 100px;
+        width: 500px;
+        height: 500px;
+        border-radius: 54% 46% 68% 32% / 57% 52% 48% 43%;
+        transition: 1s;
+        animation: showImg 3s linear, morph 15s linear infinite;
+        @keyframes showImg {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes morph {
+            0%,
+            100% {
+                border-radius: 88% 12% 68% 32% / 25% 24% 76% 75%;
+            }
+            60% {
+                border-radius: 40% 60%;
+            }
+        }
+    }
+    &Pic {
+        position: absolute;
+        z-index: 2;
+        width: 550px;
+        right: -30px;
+        top: 24px;
+        animation: showPic 1s linear;
+        @keyframes showPic {
+            0% {
+                right: -600px;
+            }
+            100% {
+                right: -30px;
+            }
+        }
+    }
+    @media (max-width:990px) {
+        & {
+            &Img {
+                background: transparent;
+                animation: paused;
+                right: -66px;
+            }
+            &Pic {
+                opacity: 0.3;
+                border-radius: 50%;
+                right: 0px;
+                animation: showPic 1s linear;
+                @keyframes showPic {
+                    0% {
+                        right: -130px;
+                    }
+                    100% {
+                        right: 0px;
+                    }
+                }
+            }
+            &Desc {
+                width: 75%;
+                margin: 0 -2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@import '../../../css/vars';
+.portfolio {
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    height: calc(100vh - 70px);
+    &Container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+        grid-gap: 2rem;
+        padding: 4rem 4rem 2rem 4rem;
+        transform-origin: right;
+        @media (max-width: 990px) {
+            padding: 4rem 2rem;
+        }
+        animation: portf 1.5s linear;
+        @keyframes portf {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    }
+    &Card {
+        background-color: $bg-clr-two;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 18px;
+        padding: 0 0 100px 0;
+        &Img {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 1s ease-in-out;
+            }
+        }
+        &:hover img {
+            transform: scale(2);
+        }
+        &Desc {
+            padding: 25px;
+            &H4 {
+                font-weight: 400;
+                color: $clr-icon-two;
+                margin-bottom: 10px;
+            }
+            &P {
+                font-size: calc(3px + 2vmin);
+                color: $clr-gray-two;
+            }
+        }
+        &Stacks {
+            padding: 0 25px;
+            h5 {
+                font-weight: 500;
+                color: $clr-icon-two;
+                margin-bottom: 10px;
+            }
+            &Ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    padding: 6px 4px;
+                    font-size: calc(2px + 2vmin);
+                }
+            }
+        }
+        &Links {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 15px 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            position: absolute;
+            bottom: 0;
+        }
+        &Link {
+            display: flex;
+            align-items: center;
+            padding: 6px;
+            color: $clr-light;
+            font-size: calc(12px + 2vmin);
+            border-radius: 4px;
+            transition: 0.3s;
+            &:hover {
+                background-color: $clr-icon-two;
+            }
+        }
+    }
+}
