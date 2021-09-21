@@ -94,8 +94,8 @@ export const translations = {
                 "img": "portfolio.png",
                 "desc": "Portafolio Personal donde muestro mis recientes y destacados proyectos a través de mi experiencia profesional y laboral, así como la descarga de mi CV en español e ingles.",
                 "stacks": ["React.JS"],
-                "code": "https://github.com/adanlazcano/aguarama-star-counter-server",
-                "page": "https://aguarama.netlify.app/"
+                "code": "https://github.com/adanlazcano/portafolio",
+                "page": "https://adanlazcano.netlify.app/"
             },
         ],
 
@@ -201,8 +201,8 @@ export const translations = {
                 "img": "portfolio.png",
                 "desc": "Personal Portfolio where I show my recent and outstanding projects through my professional and work experience and download my CV in Spanish and English.",
                 "stacks": ["React.JS"],
-                "code": "https://github.com/adanlazcano/aguarama-star-counter-server",
-                "page": "https://aguarama.netlify.app/"
+                "code": "https://github.com/adanlazcano/portafolio",
+                "page": "https://adanlazcano.netlify.app/"
             },
         ],
         "web": "Visit",
