@@ -93,7 +93,7 @@ export const translations = {
             {
                 "name": "Portafolio",
                 "img": "portfolio.png",
-                "desc": "Portafolio Personal donde muestro mis recientes y destacados proyectos a través de mi experiencia profesional y laboral, así como la descarga de mi CV en español e ingles.",
+                "desc": "Portafolio Personal donde muestro mis recientes y destacados proyectos a través de mi experiencia profesional y laboral, así como la descarga de mi CV en español e inglés.",
                 "stacks": ["React.JS"],
                 "code": "https://github.com/adanlazcano/portafolio",
                 "page": "https://adanlazcano.netlify.app/"
