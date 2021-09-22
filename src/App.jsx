@@ -7,9 +7,6 @@ import Resume from './pages/resume/Resume';
 import Portfolio from './pages/portfolio/Portfolio';
 
 const App = _ => {
-
- 
-
   return (
     <div className="App">
       <Router>

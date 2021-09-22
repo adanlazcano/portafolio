@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 
+// Project's Cards
+
 const Project = ({name,img,desc,stacks,code,page,web,github}) =>{
 
     return(
         <div className="portfolioCard">
            
             <div className="portfolioCardImg">
+                <Link target="_blank" to={{pathname:page}}>
                 <img src={`${process.env.REACT_APP_URL_IMG}${img}`} title={name} alt={name} />
+                </Link>
             </div>
            
             <div className="portfolioCardDesc">

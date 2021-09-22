@@ -1,3 +1,4 @@
+// My tanslation what will use on this application (es/en)
 export const translations = {
 
     "es": {

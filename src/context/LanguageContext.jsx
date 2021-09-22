@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const LanguageContext = createContext();
 
-// SET AND UPDATE useState FOR USE ON ALL PAGES
+// SET AND UPDATE LANGUAGE useState FROM translations FOR USE ON ALL PAGES
 const LanguageProvider = ({ children }) => {
      
     const [language,setLanguage] = useState(translations['es']);

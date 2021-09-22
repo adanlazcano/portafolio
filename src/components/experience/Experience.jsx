@@ -1,4 +1,6 @@
 
+//Component what will draw on resume page my experience
+
 const Experience = ({year,company,position,desc,stack}) => {
 
     return (

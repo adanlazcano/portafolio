@@ -1,4 +1,6 @@
 import './css/tab.css'
+
+// This component shows the tab on all pages on the right side
 const Tab = () => {
 
     window.addEventListener('click',_=>{

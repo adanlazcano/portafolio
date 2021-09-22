@@ -243,7 +243,7 @@
   margin-top: 14px;
   text-align: justify;
   color: #FFF;
-  font-size: calc(5px + 2vmin);
+  font-size: calc(4px + 2vmin);
   white-space: pre-line;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
@@ -266,7 +266,7 @@
 .resume .container .right-side .experience .box .year-company h5 {
   color: #848C90;
   font-weight: 500;
-  font-size: calc(5px + 2vmin);
+  font-size: calc(2px + 2vmin);
 }
 
 .resume .container .right-side .experience .box .year-company h6 {
@@ -281,7 +281,7 @@
 .resume .container .right-side .experience .box .text h4 {
   color: #2A7DA2;
   margin-bottom: 10px;
-  font-size: calc(8px + 2vmin);
+  font-size: calc(7px + 2vmin);
   font-weight: 700;
 }
 

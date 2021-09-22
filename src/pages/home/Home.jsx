@@ -4,6 +4,7 @@ import LanguageContext from '../../context/LanguageContext';
 import Tab from "../../components/tab/Tab";
 import { Link } from 'react-router-dom';
 
+// Home Page
 const Home = () => {
     
     const{language} =  useContext(LanguageContext);

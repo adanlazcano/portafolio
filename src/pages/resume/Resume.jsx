@@ -5,6 +5,7 @@ import Experience from '../../components/experience/Experience';
 import { Link } from 'react-router-dom';
 import LanguageContext from '../../context/LanguageContext';
 
+// Resume Page
 const Resume = () => {
     const{language} =  useContext(LanguageContext);
      return (
@@ -98,7 +99,7 @@ const Resume = () => {
                                     <span className="text"> React.Js</span>
                                 </div>
                                 <span className="percent">
-                                    <div style={{width: "7 4%"}}></div>
+                                    <div style={{width: "75%"}}></div>
                                 </span>
                                 <div className="skill-name">
                                     <i style={{color:"#03A9F4",fontStyle: "normal",fontSize:"12px"}}>PHP</i>

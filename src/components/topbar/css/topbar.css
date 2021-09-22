@@ -54,7 +54,7 @@
   padding: 0 15px;
   z-index: 4;
   border-radius: 45px;
-  font-size: calc(1px + 2vmin);
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,8 +204,8 @@
 
 .header.active .headerMenu::before {
   background-color: #21283A;
-  -webkit-box-shadow: 0 0 0 1200px #2A7DA2;
-          box-shadow: 0 0 0 1200px #2A7DA2;
+  -webkit-box-shadow: 0 0 0 2000px #2A7DA2;
+          box-shadow: 0 0 0 2000px #2A7DA2;
 }
 
 .header.active .headerMenuLinks {

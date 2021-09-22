@@ -34,7 +34,7 @@
         padding: 0 15px;
         z-index: 4;
         border-radius: 45px;
-        font-size: calc(1px + 2vmin);
+        font-size: 12px;
         display: flex;
         align-items: center;
         user-select: none;
@@ -146,7 +146,7 @@
         opacity: 1;
         &::before {
             background-color: $bg-clr;
-            box-shadow: 0 0 0 1200px $clr-icon-two;
+            box-shadow: 0 0 0 2000px $clr-icon-two;
         }
     }
     &.active .headerMenuLinks {

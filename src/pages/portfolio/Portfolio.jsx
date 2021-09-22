@@ -4,6 +4,7 @@ import LanguageContext from '../../context/LanguageContext';
 import Tab from "../../components/tab/Tab";
 import Project from '../../components/projects/Project';
 
+// Portfolio Page
 const Portfolio = () => {
     
     const{language} =  useContext(LanguageContext);

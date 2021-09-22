@@ -85,14 +85,13 @@
   width: 50%;
   background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#2A7DA2), to(transparent));
   background: linear-gradient(90deg, transparent, #2A7DA2, transparent);
-  position: absolute;
+  position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   overflow: hidden;
-  right: 100px;
-  width: 500px;
-  height: 500px;
+  width: 50%;
+  height: 100%;
   border-radius: 54% 46% 68% 32% / 57% 52% 48% 43%;
   -webkit-transition: 1s;
   transition: 1s;
@@ -141,7 +140,8 @@
 .homePic {
   position: absolute;
   z-index: 2;
-  width: 550px;
+  width: 100%;
+  height: 100%;
   right: -30px;
   top: 24px;
   -webkit-animation: showPic 1s linear;
@@ -172,11 +172,16 @@
     -webkit-animation: paused;
             animation: paused;
     right: -66px;
+    width: 500px;
+    position: absolute;
   }
   .homePic {
     opacity: 0.3;
     border-radius: 50%;
-    right: 0px;
+    width: 100%;
+    height: auto;
+    right: -10px;
+    top: 8%;
     -webkit-animation: showPic 1s linear;
             animation: showPic 1s linear;
   }

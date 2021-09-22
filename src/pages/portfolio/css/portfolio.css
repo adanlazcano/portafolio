@@ -8,8 +8,8 @@
 .portfolioContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  -ms-grid-columns: (minmax(25vmax, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(25vmax, 1fr));
   grid-gap: 2rem;
   padding: 4rem 4rem 2rem 4rem;
   -webkit-transform-origin: right;
